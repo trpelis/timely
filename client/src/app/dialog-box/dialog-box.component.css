@@ -1,0 +1,11 @@
+.box-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .close {
+    float: right;
+    top:-24px;
+    right:-24px;
+    border: 2px;
+  }

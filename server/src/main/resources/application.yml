@@ -1,0 +1,19 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: timely
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/timelyDB
+    username: postgres
+    password: qwert1234
+    driverClassName: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create #this tells hibernate to auto create table in postgres from JavaClass
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

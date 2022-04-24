@@ -1,0 +1,28 @@
+<div class="mat-elevation-z8 my-table">
+    <mat-table
+      [dataSource]="projects">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Project name</mat-header-cell>
+        <mat-cell *matCellDef="let project">{{project.name}}</mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="start">
+        <mat-header-cell *matHeaderCellDef>Start</mat-header-cell>
+        <mat-cell *matCellDef="let project">{{project.startTime}}</mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="end">
+        <mat-header-cell *matHeaderCellDef>End</mat-header-cell>
+        <mat-cell *matCellDef="let project">{{project.endTime}}</mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="duration">
+        <mat-header-cell *matHeaderCellDef>Duration</mat-header-cell>
+        <mat-cell *matCellDef="let project">{{project.duration}}</mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayColumns;"></mat-row>
+    </mat-table>
+  </div>
+  

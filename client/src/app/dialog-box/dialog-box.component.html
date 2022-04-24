@@ -1,0 +1,33 @@
+<!--The MatDialog service can be used to open modal dialogs with Material Design styling and animations-->
+<div  mat-dialog-title class="box-title">
+    <h1>Stop Timer</h1>
+    <button
+      class="close"
+      mat-raised-button
+      [mat-dialog-close]="false"
+    >X
+    </button>
+  </div>
+<div mat-dialog-content>
+    <mat-form-field appereance="outline">
+        <mat-label>Project name</mat-label>
+        <input
+        matInput
+        type = "text"
+        id = "name"
+        name = "name"
+        [(ngModel)] = "name"
+        #s = "ngModel"
+        required
+        >
+        <!--ngModel Creates a FormControl instance from a domain model 
+        and binds it to a form control element.-->
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button
+    class = "center"
+    mat-raised-button 
+    [mat-dialog-close]="{name}"
+    [disabled]="!s.value">Stop timer</button>
+</div>
