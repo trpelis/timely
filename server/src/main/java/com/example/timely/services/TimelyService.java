@@ -20,6 +20,8 @@ public class TimelyService {
     public TimelyService(WorkSessionRepository workSessionRepo) {
         this.workSessionRepo = workSessionRepo;
     }
+
+
     //get sessions from DB
     public List<WorkSessionDTO> getAll(){
         return workSessionRepo.findAll().stream()
